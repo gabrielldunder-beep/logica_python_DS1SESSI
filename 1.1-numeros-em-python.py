@@ -27,6 +27,35 @@ numero_inteiro = 10
 print ("valor:" , numero_inteiro)
 
 #type () mostra qual é o tipo de variável
-print("Tipo:", TYPE(NUMERO_INTEIRO))
+print("Tipo:", type(numero_inteiro))
 
-PRINT ("======================")
+print ("====================")
+
+# EXEMPLO 02 - NUMERO DECIMAL 
+
+numero_decimal = 3.14
+
+print ("valor", numero_decimal)
+print ("Tipo", type(numero_decimal))
+
+
+print ("========================")
+
+# EXEMPLO 03 - NUMEROS COMPELXOS
+# um numéro complexo posssui duas partes:
+# Parte real (Numero normal)
+# Parte imaginária (multiplicada por j)
+
+# Estrutura Geral :
+# numero = a + bj
+
+# a = parte real
+# b = parte imaginária
+# j = unidade imaginária
+
+numero_complexo = 2 + 3j
+
+print("valor:", numero_complexo)
+print ("Tipo:", type(numero_complexo))
+
+print("================")
