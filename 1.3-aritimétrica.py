@@ -89,7 +89,7 @@ print("Tipo:", type(resultado))
 
 # EX10
 # Mostre o resultado da divisão de -7 por 2
-# usando divisão inteira e o operador de resto.
+# usando divisão inteira e o operador de resto
 
 divisao = -7 // 2
 resto = -7 % 2
