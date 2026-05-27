@@ -1,169 +1,147 @@
-# AULA COMPLETA : NUMEROS EM PYTHON
+# ==========================================
+# AULA COMPLETA : NÚMEROS EM PYTHON
+# ==========================================
+
 """
-VAMOS APRENDER :
-1 - tipos numéricos
-2 - conversões de tipos
-3 - Hierarquia numérica
-4 - operações matemáticas
-5 - Coerção de tipos 
-6 - verificação de tipos 
-7 - Entradasa de dados 
+VAMOS APRENDER:
+1 - Tipos numéricos
+2 - Conversões de tipos
+3 - Operações matemáticas
+4 - Verificação de tipos
 """
-#==========================
+
+# ==========================================
 # PASSO 01 - TIPOS NUMÉRICOS
-#==========================
-# int -> números inteiros 
-# float -> números com casas decimais 
-# complex -> números complexos (usado em matemática/engenharia)
+# ==========================================
 
 print("===== TIPOS NUMÉRICOS =====")
 
-# EXEMPLO O1 - NUMERO INTEIRO
-
-# criamos uma variável chamada numero_inteiro
+# EXEMPLO 01 - NÚMERO INTEIRO
 numero_inteiro = 10
 
-#Mostramos o valor
-print ("valor:" , numero_inteiro)
-
-#type () mostra qual é o tipo de variável
+print("Valor:", numero_inteiro)
 print("Tipo:", type(numero_inteiro))
 
-print ("====================")
+print("-------------------")
 
-# EXEMPLO 02 - NUMERO DECIMAL 
-
+# EXEMPLO 02 - NÚMERO DECIMAL
 numero_decimal = 3.14
 
-print ("valor", numero_decimal)
-print ("Tipo", type(numero_decimal))
+print("Valor:", numero_decimal)
+print("Tipo:", type(numero_decimal))
 
+print("-------------------")
 
-print ("========================")
-
-# EXEMPLO 03 - NUMEROS COMPELXOS
-# um numéro complexo posssui duas partes:
-# Parte real (Numero normal)
-# Parte imaginária (multiplicada por j)
-
-# Estrutura Geral :
-# numero = a + bj
-
-# a = parte real
-# b = parte imaginária
-# j = unidade imaginária
-
+# EXEMPLO 03 - NÚMERO COMPLEXO
 numero_complexo = 2 + 3j
 
-print("valor:", numero_complexo)
-print ("Tipo:", type(numero_complexo))
+print("Valor:", numero_complexo)
+print("Tipo:", type(numero_complexo))
 
-print("================")
+print("Parte real:", numero_complexo.real)
+print("Parte imaginária:", numero_complexo.imag)
 
-# EXEMPLO 03 - ACESSANDO CADA PARTE DO NÚMERO 
+print("\n")
 
-# .real retorna a parte imaginaria 
-print ("Parte Imaginária:" , numero_complexo.real)
 
-# .imag retorna a parte imaginária
-print ("Parte imaginária : ", numero_complexo.imag)
+# ==========================================
+# PASSO 02 - CONVERSÃO DE TIPOS
+# ==========================================
 
-# APENAS PARA SEPARAR VISUALMENTE A SAIDA 
-print ("\n\n")
+print("===== CONVERSÕES =====")
 
-#=======================================
-  ##  PASSO 02 - CONVERSÃO TIPOS
-#=======================================
+# float para int
+valor = int(3.9)
 
-# emxemplo Clássico
-# Dados vindos do usuários  são texto (string) , muitas vezes é necessário converter eles .
+print("int(3.9):", valor)
+print("Tipo:", type(valor))
 
-print ("====== Conversões ======")
+print("-------------------")
 
-# float -> int (3.9)
+# string para int
+valor1 = "10"
 
-valor  = int (3.9)
+print("Antes:", type(valor1))
 
-print("int(3.9) :", valor)
-print("tipo:", type(valor))
+valor2 = int(valor1)
 
-# string -> int
-valor1 = "10" 
-print(type(valor1))
+print("Depois:", valor2)
+print("Tipo:", type(valor2))
 
-valor2 = int ("10")
-print = ('int("10"):', valor2)
-print ("tipo:", type(valor2))
+print("-------------------")
 
-#int --> Float
-valor3 = float (10)
-print("float(10:", valor3)
-print("tipo:", type(valor3))
+# int para float
+valor3 = float(10)
 
-# AULA COMPLETA - STRINGS EM PYTHON
+print("float(10):", valor3)
+print("Tipo:", type(valor3))
 
-# - Criação de strings
-# - Strings multilinha
-# - Índices e slices
-# - Operações com strings
-# - imutabilidade
-# - Métodos úteis
-# - Formação de texto 
-# - unicode e bytes
+print("\n")
 
-#------------------------
-# 1) CRIAÇÃO DE STRINGS
-#------------------------
- # Strings são textos em python
- # Podem ser criadas usando aspas simples ou duplas 
+
+# ==========================================
+# PASSO 03 - OPERAÇÕES MATEMÁTICAS
+# ==========================================
+
+print("===== OPERAÇÕES =====")
+
+a = 10
+b = 5
+
+print("Soma:", a + b)
+print("Subtração:", a - b)
+print("Multiplicação:", a * b)
+print("Divisão:", a / b)
+
+print("\n")
+
+
+# ==========================================
+# PASSO 04 - STRINGS EM PYTHON
+# ==========================================
+
+print("===== STRINGS =====")
 
 texto1 = "Python"
-texto2 = 'curso de python'
+texto2 = 'Curso de Python'
+
+print(texto1)
+print(texto2)
+
+print("-------------------")
+
+# Aspas dentro da string
 texto3 = "copa 'padrão fifa'"
 texto4 = 'copa "padrão fifa"'
 
-print(texto1,texto2,texto3,texto4)
+print(texto3)
+print(texto4)
 
-# Pyton permite misturar aspas simples ou duplas,dentro das strings sem precisar escapar caracteres
+print("-------------------")
 
-#------------------------------------
-# 2) Strings multilinha
-#------------------------------------
-# usando trés aspas ("""ou ''') para criar textos que ocupam várias linhas.
-
-menu = """\
-Uso:ograma [OPÇÕES]
+# String multilinha
+menu = """
 -H Exibe ajuda
--U url do dataset
+-U Url do sistema
 """
+
 print(menu)
 
-#ESSE formato é muito usada para:
-# - Menus
-# - Documentação
-# - textos longos
+print("-------------------")
 
-#---------------------------
-# 3) concatenação automática
-#-----------------------------
-# Quandos duas strings aparecem lado a lado, o python junta automaticamente
+# Concatenação automática
+texto = ("Python" " é " "muito legal")
 
-texto = ("copa" "2026" "Neymar é show mesmo? " "talvez")
-print (texto)
+print(texto)
 
-#----------------------------
-# 4) strings como sequência de caracteres, cada caractere possui um índice
+print("-------------------")
 
+# Strings como sequência
 st = "maracana"
-print ("primeira letra", st[0])
-# só exibir a letra: m
 
-print ("ultima letra", st[-1])
-
-print ("trecho 1:4", st[1:4])
-
-print ("do inicio até 3:", st[:3])
-
-print ("do 2 até o fim:", st[2:])
-
-print ("tamanho", len(st))
+print("Primeira letra:", st[0])
+print("Última letra:", st[-1])
+print("Trecho 1:4:", st[1:4])
+print("Do início até 3:", st[:3])
+print("Do 2 até o fim:", st[2:])
+print("Tamanho:", len(st))
