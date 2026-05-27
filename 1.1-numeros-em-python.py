@@ -100,3 +100,70 @@ valor3 = float (10)
 print("float(10:", valor3)
 print("tipo:", type(valor3))
 
+# AULA COMPLETA - STRINGS EM PYTHON
+
+# - Criação de strings
+# - Strings multilinha
+# - Índices e slices
+# - Operações com strings
+# - imutabilidade
+# - Métodos úteis
+# - Formação de texto 
+# - unicode e bytes
+
+#------------------------
+# 1) CRIAÇÃO DE STRINGS
+#------------------------
+ # Strings são textos em python
+ # Podem ser criadas usando aspas simples ou duplas 
+
+texto1 = "Python"
+texto2 = 'curso de python'
+texto3 = "copa 'padrão fifa'"
+texto4 = 'copa "padrão fifa"'
+
+print(texto1,texto2,texto3,texto4)
+
+# Pyton permite misturar aspas simples ou duplas,dentro das strings sem precisar escapar caracteres
+
+#------------------------------------
+# 2) Strings multilinha
+#------------------------------------
+# usando trés aspas ("""ou ''') para criar textos que ocupam várias linhas.
+
+menu = """\
+Uso:ograma [OPÇÕES]
+-H Exibe ajuda
+-U url do dataset
+"""
+print(menu)
+
+#ESSE formato é muito usada para:
+# - Menus
+# - Documentação
+# - textos longos
+
+#---------------------------
+# 3) concatenação automática
+#-----------------------------
+# Quandos duas strings aparecem lado a lado, o python junta automaticamente
+
+texto = ("copa" "2026" "Neymar é show mesmo? " "talvez")
+print (texto)
+
+#----------------------------
+# 4) strings como sequência de caracteres, cada caractere possui um índice
+
+st = "maracana"
+print ("primeira letra", st[0])
+# só exibir a letra: m
+
+print ("ultima letra", st[-1])
+
+print ("trecho 1:4", st[1:4])
+
+print ("do inicio até 3:", st[:3])
+
+print ("do 2 até o fim:", st[2:])
+
+print ("tamanho", len(st))
